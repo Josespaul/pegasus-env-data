@@ -55,7 +55,7 @@ cd /home/pi/pegasus-env-data
 git commit -a -m "mock update"
 
 if ping -q -c 1 -W 1 8.8.8.8 >/dev/null; then
-  git push master origin
+  git push origin master
 else
   true
 fi
