@@ -50,5 +50,16 @@ echo >> peg.log
 echo >> peg.log
 echo >> peg.log
 
-sleep 10
+
+cd /home/pi/pegasus-env-data
+git commit -a -m "mock update"
+
+if ping -q -c 1 -W 1 8.8.8.8 >/dev/null; then
+  git push master origin
+else
+  true
+fi
+
+sleep 30
+
 done
